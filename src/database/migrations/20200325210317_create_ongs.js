@@ -1,14 +1,14 @@
 exports.up = function(knex) {
   return knex.schema.createTable('ongs', function(table){
-    table.integer('id').primary();
-    table.string('name').notNullaBle();
-    table.string('email').notNullaBle().unique();
-    table.string('whatsapp').notNullaBle();
-    table.string('city').notNullaBle();
-    table.string('uf', 2).notNullaBle();
+    table.string('id').primary();
+    table.string('name').notNullable();
+    table.string('email').notNullable().unique();
+    table.string('whatsapp').notNullable();
+    table.string('city').notNullable();
+    table.string('uf', 2).notNullable();
   })
 };
 
 exports.down = function(knex) {
-  knex.schema.dropTable('onds');
+  knex.schema.dropTable('ongs');
 };
